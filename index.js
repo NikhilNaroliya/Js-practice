@@ -195,3 +195,175 @@
 
 // let len=array.length
 // console.log(sumOfAllAges(array,len)); // 121
+
+
+
+// functional programming que
+// Write an ES6 function that takes an array of numbers and returns an array with each number incremented by 3 using the map method.
+
+// const incrementNumbers=(num)=>num+3;
+
+// const numbers = [1, 2, 3, 4, 5];
+// console.log( numbers.map(incrementNumbers))
+
+// Output: [4, 5, 6, 7, 8]
+
+//2  ---------
+
+// Your ES6 function here
+
+
+// const capitalizeArray=str=>str.toUpperCase()
+
+// const myArray = ['apple', 'banana', 'cherry'];
+// console.log(myArray.map(capitalizeArray))
+
+// ---------3-------
+
+// Your ES6 function here
+
+// const getAges=(obj={})=>obj.age
+
+// const people = [
+//   { name: 'Ankit', age: 25 },
+//   { name: 'Vinit', age: 24 },
+//   { name: 'Shashi', age: 29 }
+// ];
+// const ages=people.map(getAges)
+// console.log(ages); // Output: [25, 24, 29]
+
+// --------------4----------
+// Your ES6 function here
+
+// getProductNamesInLowerCase=(obj={})=>obj.name.toLowerCase()
+// const products = [
+//   { name: 'Lip Balm', stock: 100 },
+//   { name: 'PERFUME', stock: 400 },
+//   { name: 'Socks', stock: 200 }
+// ];
+// console.log(products.map(getProductNamesInLowerCase));
+// Output: ["lip balm", "perfume", "socks"]
+
+
+
+//-------5--------
+// Your ES6 function here
+
+
+// getCityNames=(city={})=>city.name
+// const cities = [
+//   { name: 'New York', population: 8538000 },
+//   { name: 'Los Angeles', population: 3976000 },
+//   { name: 'Bangalore', population: 13608000 }
+// ];
+
+// console.log(cities.map(getCityNames)); 
+// // Output: ["New York", "Los Angeles", "Bangalore"]
+
+//------6------
+// Your ES6 function here
+
+
+// const filterstr=(str)=>str.length>5;
+
+
+// const fruits = ['apple', 'banana', 'cherry', 'watermelon', 'pineapple'];
+// console.log(fruits.filter(filterstr))
+
+//   console.log(fruits.filter((n) => n.length > 5))
+// // Output: ["banana", "cherry", "watermelon", "pineapple"]
+
+
+//----7--------
+
+// Your ES6 code here
+
+// isDivisibleBy3and5=(num)=>num%3===0 && num%5===0
+
+// const numbers = [1, 2, 30, 4, 15];
+// console.log(numbers.filter(isDivisibleBy3and5));
+// // Output: [30, 15]
+
+
+
+//------8----------
+
+// Your ES6 code here
+
+// const filterByAge=(obj={})=>obj.age>30
+
+// const people = [
+//   { name: 'Rahul', age: 25 },
+//   { name: 'Raj', age: 35 },
+//   { name: 'Vijay', age: 45 }
+// ];
+
+// console.log(people.filter(filterByAge)); 
+// // Output: [{ name: 'Raj', age: 35 }, { name: 'Vijay', age: 45 }]
+
+
+
+//-------9---------
+// Your ES6 code here
+
+
+// const filterByScore=(obj={})=>obj.score>80;
+// const students = [
+//   { name: 'Aditya', score: 85 },
+//   { name: 'Bob', score: 75 },
+//   { name: 'Charlie', score: 90 }
+// ];
+
+// console.log(students.filter(filterByScore)); 
+// // Output: [{ name: 'Aditya', score: 85 }, { name: 'Charlie', score: 90 }]
+
+//---------10----------
+// Your ES6 code here
+
+// const filterByCityAndAge=(obj={})=>obj.city==='Indore'&& obj.age>70
+
+// const people = [
+//   { name: 'Ridhima', age: 75, city: 'Indore' },
+//   { name: 'Akshay', age: 60, city: 'Delhi' },
+//   { name: 'Udit', age: 80, city: 'Indore' },
+// 	{ name: 'Venki', age: 80, city: 'Bangalore' }
+// ];
+// const filteredPeople = people.filter(filterByCityAndAge);
+// console.log(filteredPeople); 
+// // Output: [{ name: 'Ridhima', age: 75, city: 'Indore' }, { name: 'Udit', age: 80, city: 'Indore' }]
+
+
+//----------11----------
+
+// Your ES6 code here
+
+// const filterByGenre=(obj={})=>obj.genre==='Science Fiction'
+
+// const books = [
+//   {title: "The Hitchhiker's Guide to the Galaxy", author: "Douglas Adams", genre: "Science Fiction"},
+//   {title: "To Kill a Mockingbird", author: "Harper Lee", genre: "Fiction"},
+//   {title: "1984", author: "George Orwell", genre: "Science Fiction"},
+//   {title: "Pride and Prejudice", author: "Jane Austen", genre: "Romance"}
+// ];
+
+// const filteredBooks =books.filter(filterByGenre);
+// console.log(filteredBooks);
+// // Output: [{title: "The Hitchhiker's Guide to the Galaxy", author: "Douglas Adams", genre: "Science Fiction"}, {title: "1984", author: "George Orwell", genre: "Science Fiction"}]
+
+//--------12----------
+
+
+// Your ES6 code here
+
+// const filterBySalary=obj=>obj.salary>22000 && obj.age>25
+
+// const employees = [
+//   {name: "Abhay", age: 25, salary: 20000},
+//   {name: "Joice", age: 30, salary: 35000},
+//   {name: "Reena", age: 35, salary: 15000},
+//   {name: "Jeena", age: 40, salary: 50000}
+// ];
+
+// const filteredEmployees = employees.filter(filterBySalary)
+// console.log(filteredEmployees);
+// // Output: [{name: "Joice", age: 30, salary: 35000}, {name: "Jeena", age: 40, salary: 50000}]
