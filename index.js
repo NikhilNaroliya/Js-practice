@@ -387,3 +387,146 @@
 // ];
 
 // console.log(bollywoodMovies.filter(BestMovies).map(filtered))
+
+// Instructions: 
+// 1. Make use of .reduce() method in this set. 
+// 2. You can make use of basic methods such as .length, toLowerCase(), toUpperCase() if needed. 
+// 3. Do NOT use for-loops.
+
+//  practice set 4  
+
+// const concatinating=(acc,curr)=>acc+curr;
+
+// const strings = ["apple", "banana", "cherry", "date", "blueberry"];
+// // Your code here
+// console.log(strings.reduce(concatinating).length)
+// console.log(totalLength(strings));
+// Output: 30
+
+// Write an ES6 function sumSquares that takes an array of numbers and returns the sum of the squares of all the numbers in the array
+
+
+// const sumSquares=(acc,curr)=>acc+(curr*curr);
+// const numbers = [1, 2, 3, 4, 5];
+// // Your code here
+// console.log(numbers.reduce(sumSquares))
+//  // Output: 55 
+
+// Write an ES6 function that calculates and returns the total value of all items in an array of objects.
+
+// const items = [
+//   { name: "Item 1", price: 10 },
+//   { name: "Item 2", price: 20 },
+//   { name: "Item 3", price: 30 }
+// ];
+// // Your code here
+
+// console.log(items.reduce((acc,curr)=>acc+curr.price,0))
+
+
+
+// Write an ES6 function that takes an array of strings as input and concatenates them into a single string.
+
+// Your code here
+
+
+// const concatStrings=(str,curr)=>str+curr
+
+// console.log(['this', 'is', 'fun'].reduce(concatStrings)); // Output: 'thisisfun'
+
+// Write an ES6 function to multiply and return all the elements of a given array.
+
+// const numbers = [1, 2, 3, 4, 5];
+// // Your code here
+
+// console.log(numbers.reduce((acc,curr)=>acc*curr,1));
+// Output: 120
+
+// Write an ES6 function that takes an array of strings and returns the longest string.
+// const longestString=(acc,curr)=>{
+//   if(curr.length>acc.length)
+//    acc=curr
+
+//    return acc;
+// }
+// const strings = [  "code","neogcamp", "Batman","Haule Haule", "Awesome"];
+// // Your code here
+// console.log(strings.reduce(longestString)); 
+// // Output: 'Haule Haule'
+
+// Write an ES6 function that takes an array of objects with name and age property, and returns the name of the oldest person.
+
+// const people = [
+//   {name: 'Jeena', age: 25}, 
+//   {name: 'Priya', age: 30}, 
+//   {name: 'Naina', age: 45}
+// ]
+// // Your code here
+// const oldestPersonName=(acc,curr)=>{
+//   if(curr.age>acc.age)
+//    acc=curr
+
+//    return acc
+// }
+// console.log(people.reduce(oldestPersonName).name); 
+// // Output: 'Naina'
+
+// Write an ES6 function that takes an array of objects representing people with properties name and age, and returns an object with the average age of all the people.
+
+//approach 
+// used map for taking ages as an array 
+//used reduce to calculated average
+// const getAverage=(array)=>{
+//   const totalAges=array.map((arr)=>arr.age)
+//    const sum=totalAges.reduce((acc,curr)=>acc+curr);
+//    return sum/array.length
+// }
+// const people = [
+//   { name: 'Alice', age: 25 },
+//   { name: 'Bob', age: 30 },
+//   { name: 'Charlie', age: 35 },
+//   { name: 'David', age: 40 }
+// ];
+// //32.5
+// console.log(getAverage(people))
+
+// Write an ES6 function that takes an array of objects representing products with properties name, price, and quantity, and returns an object with the most expensive product.
+
+// const findingMostExpensive=(array)=>{
+//   return array.reduce((acc,curr)=>{
+//     acc<curr.price
+//     return acc=curr
+//   })
+// }
+// const products = [
+//   { name: "Bread", price: 10, quantity: 2 },
+//   { name: "Clips", price: 20, quantity: 5 },
+//   { name: "Knife", price: 30, quantity: 1 },
+//   { name: "Slipper", price: 40, quantity: 3 },
+// ];
+// // Your code here
+// console.log(findingMostExpensive(products))
+// // console.log(products.reduce((acc,curr)=>{
+// //   acc<curr.price
+   
+// //    return  acc=curr
+  
+
+   
+// },0))
+
+// Write an ES6 function that takes an array of strings and returns an object with the count of each string.
+// const countStrings=(array)=>{
+
+//  return  array.reduce((acc,curr)=>{
+//     acc[curr]=acc[curr]?acc[curr]+1:1
+//     return acc
+//   },{})
+// }
+// const fruits = ['apple', 'banana', 'banana', 'cherry', 'apple', 'apple', 'banana'];
+// // Your code here
+
+
+
+// console.log(countStrings(fruits));
+// // Output: { 'apple': 3, 'banana': 3, 'cherry': 1 }
