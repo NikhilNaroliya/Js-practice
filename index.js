@@ -530,3 +530,253 @@
 
 // console.log(countStrings(fruits));
 // // Output: { 'apple': 3, 'banana': 3, 'cherry': 1 }
+
+
+
+
+
+//aync practice-----------------------------------------------
+
+  //------------------async / await /promises----------------//
+
+// const helperPromise = function () {
+// 	const promise = new Promise(function (resolve, reject) {
+// 	const x = "geeksforgeeks";
+// 	const y = "geeksforgeeks";
+// 	if (x === y) {
+// 		resolve("Strings are same");
+// 	} else {
+// 		reject("Strings are not same");
+// 	}
+// 	});
+
+// 	return promise;
+// };
+
+// async function demoPromise() {
+// 	try {
+// 	let message = await helperPromise();
+// 	console.log(message);
+// 	} catch (error) {
+// 	console.log("Error: " + error);
+// 	}
+// }
+
+// demoPromise();
+
+//1. Write a function ‘delayedGreeting’ that consoles a greeting message after a delay of 2 seconds using setTimeout. You can practice this question in any JS editor or your browser console.
+
+
+// const delayedGreeting=()=>{
+// setTimeout(() => {
+//   console.log("welcome to my Portfolio");
+// }, "3000");
+// }
+// delayedGreeting()
+
+  // setTimeout(()=>{
+  //   console.log("iam delaying this code for a second")
+  // },2000)
+
+  // Write a function ‘delayedAddition’ that takes in two numbers and consoles their sum after a delay of 4 seconds using setTimeout. You can practice this question in any JS editor or your browser console.
+
+  // const delayedAddition=(num1,num2)=>{
+  //   setTimeout(()=>{
+  //     console.log("displaying the result of addition after 4 seconds",num1+num2)
+  //   },4000)
+    
+  // }
+  // delayedAddition(12,23)
+
+  //  const delayedAlert=()=>{
+  //   setTimeout(()=>{
+  //     alert('Hello world')
+  //   },2000)
+  //  }
+  //  delayedAlert()
+
+
+// Write a function delayedLoop that takes a number 3 and consoles a message 'Hello' three times after a delay of 1 second each, using a for-loop and setTimeout. You can practice this question in any JS editor or your browser console.
+
+//  const delayedLoop=(interval)=>
+//   {
+//     for(let i=1;i<=interval;i++)
+//    { 
+//      let delayedTime=1000
+//      setTimeout(()=>{
+//        console.log("Hello World")
+//      },delayedTime*i)
+//     }
+//   }
+//   delayedLoop(3)
+// first hello world at 1000
+  //secnd  at 2000 and third at 3000 ms par run hua
+
+
+  //Make a fake fetch call that takes a message and a boolean value to get data and console the message received from the server. A fake fetch has been provided. You can practice this question in any JS editor or your browser console.
+
+  // const fakeFetch = (msg, shouldSucceed) => {
+  //   return new Promise((resolve, reject) => {
+  //     setTimeout(() => {
+  //       if (shouldSucceed) {
+  //         resolve(`message from server: ${msg}`);
+  //       }
+  //       reject(`error from server: ${msg}`);
+  //     }, 3000);
+  //   });
+  // };
+
+  // fakeFetch('Hi',false).then((msg)=>{
+  //   console.log("resolved "+msg)
+  // }).catch((err)=>{
+  //   console.log(err)
+  // })
+  
+  // Your Code here
+  // Hi -- after 3 seconds
+
+  // const fakeFetch = (url) => {
+  //   return new Promise((resolve, reject) => {
+  //     setTimeout(() => {
+  //       if (url === "https://example.com/api/itemlist") {
+  //         resolve({
+  //           status: 200,
+  //           message: "Success",
+  //           data: [
+  //             { itemName: "Bread", price: 30, quantity: 10 },
+  //             { itemName: "Water Bottle", price: 50, quantity: 50 },
+  //             { itemName: "Dairy Milk", price: 20, quantity: 30 }
+  //           ]
+  //         });
+  //       } else {
+  //         reject({
+  //           status: 404,
+  //           message: "Items list not found."
+  //         });
+  //       }
+  //     }, 2000);
+  //   });
+  // };
+  
+  // Your Code here
+  // // Output on the DOM should be in the format, {itemName} -- INR {price} -- {quantity}:
+  // 1. Bread -- INR 30 -- 10
+  // 2. Water Bottle -- INR 50 -- 50
+  // 3. Dairy Milk -- INR 20 -- 30
+  // // Your Code here
+  // Output on the DOM should be: 
+  // We are facing high demand at the moment. Please check back later in sometime.
+  
+  // Your Code here (Solution Given)
+  // var obj = {id : "007", name : "James Bond"};
+  // console.log(obj);                    // Object { id: "007", name: "James Bond" }
+  // console.log(JSON.stringify(obj));    //{"id":"007","name":"James Bond"}
+  // if (obj.hasOwnProperty("id")){
+  //     console.log(obj.id);             //007
+  // }
+// Your Code here (Solution Given)
+// const displayOutput = document.querySelector("#output");
+
+// fakeFetch("https://example.com/api/itemlist")
+//   .then((response) => {
+//      for(let i=0;i<3;i++)
+//      {
+//       let   {itemName,price,quantity}=response.data[i]
+//       console.log(`${itemName}--${price}--${quantity}`)
+//      }
+//   })
+//   .catch((error) => {
+//     if (error.status === 404) {
+//       displayOutput.textContent =
+//         "The data you are looking for, does not exist.";
+//     }
+//   });
+
+// Output on the DOM should be: 
+// The data you are looking for, does not exist.
+  
+  // Output on the DOM should be: 
+  // The data you are looking for, does not exist.
+
+
+  //------------------------
+
+  // const fakeFetch = (url) => {
+  //   return new Promise((resolve, reject) => {
+  //     setTimeout(() => {
+  //       if (url === "https://example.com/api/data") {
+  //         reject({
+  //           status: 500,
+  //           message: "Internal Server Error"
+  //         });
+  //       } else {
+  //         resolve({
+  //           status: 200,
+  //           data: {
+  //             message: "Success"
+  //           }
+  //         });
+  //       }
+  //     }, 2000);
+  //   });
+  // };
+  
+  // // Your Code here
+  // const displayOutput = document.querySelector("#output");
+  
+  // fakeFetch("https://example.com/api/data")
+  //   .then((response) => console.log(response))
+  //   .catch((error) => {
+  //     if (error.status === 500) {
+  //       displayOutput.textContent =
+  //         `${error.message} !Server carashed .Please try again later`;
+  //     }
+  //   });
+  // // Output on the DOM should be: 
+  // // Internal Server Error! The server crashed. Please try again in some time
+  
+  
+
+// Use this URL - https://example.com/api/profile/NC002 in which we are passing the id of a user to make a fake fetch call and display a welcome message to the user on the DOM. A fakeFetch has been provided. Use HTML, CSS & JS template in REPL or Vanilla template in CodeSandbox for this question.
+
+
+
+  // const fakeFetch = (url) => {
+  //   return new Promise((resolve, reject) => {
+  //     setTimeout(() => {
+  //       if (url === "https://example.com/api/profile/NC002") {
+  //         resolve({
+  //           status: 200,
+  //           data: {
+  //             message: "Success",
+  //             data: { id: "NC002", name: "Roshan", institute: "neoG Camp" }
+  //           }
+  //         });
+  //       } else {
+  //         reject({
+  //           status: 404,
+  //           message: "Resource not found"
+  //         });
+  //       }
+  //     }, 2000);
+  //   });
+  // };
+  
+  // // Your Code here
+  // // const displayOutput = document.querySelector("#output");
+  
+  // fakeFetch("https://example.com/api/profile/NC002")
+  //   .then((res) => {
+     
+  //      console.log(`welcome ${res.data.data.name} from ${res.data.data.institute}`);
+  //   }).catch((error) => {
+  //     if (error.status === 404) {
+        
+  //         console.log("The data you are looking for, does not exist.");
+  //     }
+  //   });
+
+
+
+
+
