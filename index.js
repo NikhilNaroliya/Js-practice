@@ -777,6 +777,117 @@
   //   });
 
 
+//------------------------------------HomeWork Ques-------------------
 
+// Question 1
+// Given an array of numbers, write a function that returns the difference between the largest and smallest numbers.
+// const numbers = [10, 2, 7, 14, 5];
+
+// const differenceOfLargestandSmallest=(numbers=[])=>{
+// const smallest = numbers.reduce((acc, curr) => {
+//  acc[0]=(acc[0]===undefined||curr<acc[0])?curr:acc[0]
+//    acc[1]=(acc[1]===undefined||curr>acc[1])?curr:acc[1]
+//    return acc
+// },[])
+//  console.log('smallest and largest',smallest)
+//   return smallest[1]-smallest[0]
+// }
+
+// console.log(differenceOfLargestandSmallest(numbers))
+
+// Question 2
+// Given an array of objects representing students, where each object has a name property and a grades property (an array of numbers), write a function that returns an array of objects representing the students who have an average grade of at least 90. 
+
+// const students = [
+//   { name: 'Alice', grades: [90, 95, 92] },
+//   { name: 'Bob', grades: [80, 85, 87] },
+//   { name: 'Charlie', grades: [92, 88, 94] },
+//   { name: 'David', grades: [75, 80, 82] },
+// ];
+
+//  const returnsStuAverageAbove90=(students)=>{
+//   let result=[]
+//     for(let i=0;i<students.length;i++)
+//    {
+//     let arr=students[i].grades
+//      len=arr.length
+
+//       sum=arr.reduce((acc,curr)=>{
+//         acc+=curr
+      
+//         return acc
+//       })
+//       let average=sum/len
+
+//       if(average>=90)
+//        result.push(students[i])
+      
+//   }
+//    return result
+
+//  }
+//  console.log(returnsStuAverageAbove90(students))
+
+// Question 3
+// Given an array of strings, write a function that returns an array of objects representing each unique string and its frequency in the original array.
+
+// const strings = ['apple', 'banana', 'apple', 'cherry', 'cherry', 'cherry'];4
+
+//  const frequency=(strings)=>{
+//    result={}
+
+//   const output  =strings.reduce((acc,curr)=>{
+//           acc[curr]=acc[curr]?acc[curr]+1:1
+        
+//           return acc
+//         },{})
+//         return output
+    
+//  }
+//  console.log(frequency(strings))
+
+
+// Question 4 // to be done with reduce method
+
+
+// Given an array of objects representing books, where each object has a title property and a year property, write a function that returns the titles of all books published before the year 1950 sorted alphabetically.
+
+// const books = [
+//   { title: 'The Great Gatsby', year: 1925 },
+//   { title: 'To Kill a Mockingbird', year: 1960 },
+//   { title: 'One Hundred Years of Solitude', year: 1967 },
+//   { title: 'The Catcher in the Rye', year: 1951 },
+//   { title: 'Beloved', year: 1987 },
+//   { title: 'Brave New World', year: 1932 },
+// ];
+//  const filteringTitleOfBooks=(books)=>{
+   
+//   const filteredBooks=books.filter((curr)=>curr.year<1960)
+
+//   const output=filteredBooks.map((book)=>book.title)
+   
+//    output.sort()
+   
+//    return output
+
+//   }
+//  console.log(filteringTitleOfBooks(books))
+//
+
+
+// Question 5
+
+// Write a program to find out the maximum and minimum number in an array by using only one reduce method
+// const numbers = [3,5,6,1,14];
+
+// var a = [3,5,6,1,14];
+
+
+// let output=a.reduce((acc,curr)=>{
+//    acc[0]=(acc[0]===undefined||curr<acc[0])?curr:acc[0]
+//    acc[1]=(acc[1]===undefined||curr>acc[1])?curr:acc[1]
+//    return acc
+// },[])
+// console.log(output)
 
 
